@@ -1,0 +1,31 @@
+# Math Library
+**Currently implemented structures:**
+- Generic Matrix
+  - Operator overriders for addition, subtraction, multiplication and division
+  - Macro shortcuts for 2x2, 3x3, 4x4 matrices in the forms of mat2, mat3 and mat4
+- Generic Vector
+    - Operator overriders for addition, subtraction, multiplication and division
+    -  Macro shortcuts for 2x2, 3x3, 4x4 vectors in the forms of vec2, vec3 and vec4
+- Quaternion
+    - Operator overrides for multiplication(with scalar/another quaternion), division(scalar), and addition(with another quaternion)
+    - Length of quaternion
+    - The dot prduct of two quaternions
+    - Quaternion Normalization
+- Operation Helper - takes care of all vector/matrix operations
+    - Dot product
+    - Cross Product
+    - Vector distance
+    - Vector length
+    - Vector Normalization
+    - Perpendicular vector
+    - Lerp
+    - Matrix Inverse
+    - Matrix Transpose
+    - Matrix Determinant(**TODO**)
+- Transformation Helper
+    - Matrix scaling
+    - Matrix rotation(**TODO**)
+    - Matrix translation
+    - LookAt matrix generation
+    - Perspective matrix generation
+    - Orthographic matrix generation(**TODO**)
