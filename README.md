@@ -24,8 +24,8 @@
     - Matrix Determinant(**TODO**)
 - Transformation Helper
     - Matrix scaling
-    - Matrix rotation(**TODO**)
-    - Matrix translation
-    - LookAt matrix generation
-    - Perspective matrix generation
-    - Orthographic matrix generation(**TODO**)
+    - Rotation matrix(**TODO**)
+    - Translation matrix
+    - LookAt matrix
+    - Perspective matrix 
+    - Orthographic matrix(**TODO**)
