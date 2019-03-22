@@ -1,9 +1,6 @@
-#include<iostream>
 #include "vector.h"
 #include "matrix.h"
 #include "operation.h"
-#define _USE_MATH_DEFINES
-#include <cmath> 
 namespace math
 {
 	template<std::size_t m, std::size_t n, typename T>

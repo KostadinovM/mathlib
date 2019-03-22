@@ -1,5 +1,3 @@
-#include <iostream>
-
 namespace math
 {
 	//generic matrix representation
@@ -97,7 +95,7 @@ namespace math
 		{
 			for (std::size_t j = 0; j < m; j++)
 			{
-				result[i][j] = lhs[i][j] - rhs[i][j];
+				result[i][j] = lhs[i][j] * rhs[i][j];
 			}
 		}
 		return result;
@@ -111,7 +109,7 @@ namespace math
 		{
 			for (std::size_t j = 0; j < m; j++)
 			{
-				result[i][j] = lhs[i][j] - rhs[i][j];
+				result[i][j] = lhs[i][j] / rhs[i][j];
 			}
 		}
 		return result;

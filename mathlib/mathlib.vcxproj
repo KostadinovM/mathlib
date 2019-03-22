@@ -115,11 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h" />
-    <ClInclude Include="operation.h" />
-    <ClInclude Include="quaternion.h" />
-    <ClInclude Include="transformation.h" />
-    <ClInclude Include="vector.h" />
+    <ClInclude Include="linear_algebra\matrix.h" />
+    <ClInclude Include="linear_algebra\operation.h" />
+    <ClInclude Include="linear_algebra\quaternion.h" />
+    <ClInclude Include="linear_algebra\transformation.h" />
+    <ClInclude Include="linear_algebra\vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

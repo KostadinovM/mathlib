@@ -1,6 +1,3 @@
-//transpose, inverse, cross, dot, perpendicular, normalize, length, distance
-#include <iostream>
-
 	template<std::size_t n, typename T>
 	inline T dot(vector<n, T> &lhs, vector<n, T> &rhs)
 	{
