@@ -1,3 +1,4 @@
+#pragma once
 #include <array>
 #include <assert.h>
 namespace math
@@ -121,6 +122,16 @@ namespace math
 			{
 				T s, t, r;
 			};
+
+			struct
+			{
+				vector<2, T> xy;
+			};
+
+			struct
+			{
+				vector<2, T> yz;
+			};
 		};
 
 		//constructor0: initialize an empty vector
@@ -147,11 +158,22 @@ namespace math
 
 		}
 
+		vector(const vector<2, T>& vec, const T& z)
+		{
+			data = { vec.x, vec.y, z };
+		}
+
+		vector( const T& x, const vector<2,T>& vec)
+		{
+			data = { x, vec.y, vec.z };
+		}
 
 		T& operator[](const std::size_t index)
 		{
 			return data.at(index);
 		}
+
+
 	};
 
 	template<typename T>

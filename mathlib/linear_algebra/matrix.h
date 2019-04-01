@@ -1,3 +1,7 @@
+#pragma once
+#include <cstddef>
+#include "vector.h"
+
 namespace math
 {
 	//generic matrix representation
@@ -41,10 +45,6 @@ namespace math
 			}
 		}
 
-		matrix(const std::initializer_list<T> list)
-		{
-
-		}
 
 		//returns a column vector: allows to use [] and [][] for index access
 		vector<m, T>& operator[](const std::size_t index)

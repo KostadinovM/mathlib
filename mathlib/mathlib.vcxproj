@@ -122,6 +122,11 @@
     <ClInclude Include="linear_algebra\vector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="linear_algebra\tests\test_matrix.cpp" />
+    <ClCompile Include="linear_algebra\tests\test_operation.cpp" />
+    <ClCompile Include="linear_algebra\tests\test_quaternion.cpp" />
+    <ClCompile Include="linear_algebra\tests\test_transformation.cpp" />
+    <ClCompile Include="linear_algebra\tests\test_vector.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

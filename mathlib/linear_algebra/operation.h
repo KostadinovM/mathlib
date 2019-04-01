@@ -1,4 +1,9 @@
-	template<std::size_t n, typename T>
+#pragma once
+
+#include "vector.h"
+#include "matrix.h"
+
+template<std::size_t n, typename T>
 	inline T dot(vector<n, T> &lhs, vector<n, T> &rhs)
 	{
 		T result = {};

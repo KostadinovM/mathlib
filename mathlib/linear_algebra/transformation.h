@@ -1,6 +1,9 @@
+#pragma once
+
 #include "vector.h"
 #include "matrix.h"
 #include "operation.h"
+
 namespace math
 {
 	template<std::size_t m, std::size_t n, typename T>
@@ -87,4 +90,4 @@ namespace math
 		result[3][3] = 0.0f;
 		return result;
 	}
-}
+};
