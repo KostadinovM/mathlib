@@ -2,8 +2,9 @@
 
 #include "vector.h"
 #include "matrix.h"
-
-template<std::size_t n, typename T>
+namespace math
+{
+	template<std::size_t n, typename T>
 	inline T dot(vector<n, T> &lhs, vector<n, T> &rhs)
 	{
 		T result = {};
@@ -14,8 +15,8 @@ template<std::size_t n, typename T>
 		return result;
 	}
 
-	template<3, typename T>
-	inline vector<3,T> cross(vector<n, T> &lhs, vector<n, T> &rhs)
+	template<typename T>
+	inline vector<3, T> cross(vector<3, T> &lhs, vector<3, T> &rhs)
 	{
 		vector<3, T> result;
 		result.x = lhs.y*rhs.z - lhs.z*rhs.y;
@@ -53,20 +54,20 @@ template<std::size_t n, typename T>
 		return result;
 	}
 
-	template<std::size_t 2, typename T>
-	inline vector<2, T> perpendicular(vector<n, T> &vec)
+	template<typename T>
+	inline vector<2, T> perpendicular(vector<2, T> &vec)
 	{
-		vector<n, T> result;
+		vector<2, T> result;
 		result.x = vec.y;
 		result.y = -vec.x;
 		return result;
 	}
 
-	template<std::size_t n, typename T>
-	inline vector<n,T> lerp(vector<n,T> &a, vector<n,T> &b, float percent)
+	/*template<std::size_t n, typename T>
+	inline vector<n, T> lerp(vector<n, T> &a, vector<n, T> &b, float percent)
 	{
 		return (a + t * (a - b));
-	}
+	}*/
 
 	template<std::size_t n, std::size_t m, typename T>
 	inline matrix<m, n, T> inverse(matrix<n, m, T> &mat)
@@ -80,11 +81,11 @@ template<std::size_t n, typename T>
 	inline matrix<m, n, T> transpose(matrix<n, m, T> &mat)
 	{
 		matrix<n, m, T> result;
-		for (std::size_t i; i < n; i++)
+		for (std::size_t i; i < m; i++)
 		{
-			for (std::size_t j; j < m; j++)
+			for (std::size_t j; j < n; j++)
 			{
-				reslut[i][j] = mat[j][i];
+				result[i][j] = mat[j][i];
 			}
 		}
 
@@ -95,6 +96,7 @@ template<std::size_t n, typename T>
 	inline matrix<m, n, T> determinant(matrix<n, m, T> &mat)
 	{
 		matrix<n, m, T> result;
-		
+
 		return result;
 	}
+}

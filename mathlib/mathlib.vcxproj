@@ -120,6 +120,7 @@
     <ClInclude Include="linear_algebra\quaternion.h" />
     <ClInclude Include="linear_algebra\transformation.h" />
     <ClInclude Include="linear_algebra\vector.h" />
+    <ClInclude Include="math.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="linear_algebra\tests\test_matrix.cpp" />

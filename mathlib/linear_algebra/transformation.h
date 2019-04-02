@@ -3,7 +3,7 @@
 #include "vector.h"
 #include "matrix.h"
 #include "operation.h"
-
+#include <math.h>
 namespace math
 {
 	template<std::size_t m, std::size_t n, typename T>
@@ -29,14 +29,14 @@ namespace math
 		return result;
 	}
 
-	template<typename T>
-	matrix<4, 4, T> scale(matrix<4, 4, T> &mat, vector<3, T> scale)
+	template <typename T>
+	matrix<4, 4, T>& scale(matrix<4, 4, T>& result, vector<3, T>& scale)
 	{
-		for (int i = 0; i < 3 i++)
+		for (int i = 0; i < 3; i++) 
 		{
-			mat[i][i] *= scale[i];
+			result[i][i] *= scale[i];
 		}
-		return mat;
+		return result;
 	}
 
 	template<typename T>
@@ -58,7 +58,7 @@ namespace math
 	matrix<4, 4, T> orthographic()
 	{
 
-
+		
 	}
 
 	template<typename T>
@@ -82,7 +82,7 @@ namespace math
 	matrix<4, 4, T> perspective(T fov, T angle, T far, T near)
 	{
 		matrix<4, 4, T> result;
-		float scale = 1 / tan(fov * 0.5f * M_PI / 180);
+		float scale = 1 / tan(fov * 0.5f * 3.14159265 / 180);
 		result[0][0] = scale; //scaling the x coord
 		result[1][1] = scale; //scaling the y coord
 		result[2][2] = -far / (far - near); //remap z to [0,1]

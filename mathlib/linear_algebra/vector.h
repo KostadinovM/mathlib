@@ -26,8 +26,9 @@ namespace math
 
 
 		
-		T& operator[](const std::size_t index)
+		T& operator[] (const std::size_t index)
 		{
+			assert(index >= 0 && index < 2);
 			return data.at(index);
 		}
 
@@ -91,9 +92,9 @@ namespace math
 
 		}
 
-
-		T& operator[](const std::size_t index)
+		T& operator[] (const std::size_t index)
 		{
+			assert(index >= 0 && index < 2);
 			return data.at(index);
 		}
 
@@ -168,8 +169,9 @@ namespace math
 			data = { x, vec.y, vec.z };
 		}
 
-		T& operator[](const std::size_t index)
+		T& operator[] (const std::size_t index)
 		{
+			assert(index >= 0 && index < 2);
 			return data.at(index);
 		}
 
@@ -262,8 +264,7 @@ namespace math
 	inline vector<n, T> operator+(const vector<n, T>& lhs, const T& scalar)
 	{
 		vector<n, T> result;
-		for (std::size_t i = 0; i < n; ++i)
-		{
+		for (std::size_t i = 0; i < n; ++i) {
 			result[i] = lhs[i] + scalar;
 		}
 		return result;
