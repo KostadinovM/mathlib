@@ -259,9 +259,8 @@ namespace math
 
 	//vector operator overrides
 
-	//adding
-	template<std::size_t n, typename T>
-	inline vector<n, T> operator+(const vector<n, T>& lhs, const T& scalar)
+	template <std::size_t n, typename T>
+	inline vector<n, T> operator+(vector<n, T> lhs, T scalar)
 	{
 		vector<n, T> result;
 		for (std::size_t i = 0; i < n; ++i) {
@@ -269,15 +268,12 @@ namespace math
 		}
 		return result;
 	}
-
-	template<std::size_t n, typename T>
-	inline vector<n, T> operator+ (vector<n, T>& lhs, vector<n, T>& rhs)
+	template <std::size_t n, typename T>
+	inline vector<n, T> operator+(T scalar, vector<n, T> rhs)
 	{
 		vector<n, T> result;
 		for (std::size_t i = 0; i < n; ++i)
-		{
-			result[i] = lhs[i] + rhs[i];
-		}
+			result[i] = rhs[i] + scalar;
 		return result;
 	}
 

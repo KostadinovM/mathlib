@@ -34,7 +34,7 @@ namespace math
 	template<std::size_t n, typename T>
 	inline T length(vector<n, T> &vec)
 	{
-		float result;
+		float result = 0;
 		for (std::size_t i = 0; i < n; i++)
 		{
 			result += vec[i] * vec[i];
